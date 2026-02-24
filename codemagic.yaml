@@ -1,0 +1,15 @@
+workflows:
+  ios-simulator-workflow:
+    name: iOS Simulator Build
+    environment:
+      flutter: stable
+      xcode: latest
+    scripts:
+      - name: Build for simulator
+        script: flutter build ios --debug --simulator --verbose
+    artifacts:
+      - build/ios/iphonesimulator/Runner.app
+    publishing:
+      email:
+        recipients:
+          - tawheedkortam1@gmail.com
